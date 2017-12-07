@@ -41,7 +41,7 @@ routes.get('/films/:id', function (req, res) {
 //
 routes.post('/films', function (req, res, next) {
     const filmReq = req.body;
-    User.create(filmReq)
+    Film.create(filmReq)
         .then(film => res.status(200).send(film))
         .catch((error) => res.status(400).json(error))
 });
