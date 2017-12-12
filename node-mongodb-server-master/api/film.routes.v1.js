@@ -11,9 +11,8 @@ var Film = require('../model/film.model');
 //
 routes.get('/films', function (req, res) {
     res.contentType('application/json');
-
     Film.find({})
-        .then(function (films) {
+        .then((films) => {
             res.status(200).json(films);
         })
         .catch((error) => {
